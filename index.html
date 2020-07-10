@@ -3,7 +3,7 @@
 
 <head>
    <meta charset="UTF-8">
-   <title>DJ Zaragoza: Software Developer</title>
+   <title>DJ Zaragoza</title>
 
 
    <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Lato:700'>
@@ -12,23 +12,23 @@
       /* NOTE: The styles were added inline because Prefixfree needs access to your styles and they must be inlined if they are on local disk! */
       /* Animation properties */
       .star {
-         animation: star 6s ease-out;
+         animation: star 7s ease-out;
       }
 
       .wars {
-         animation: wars 6s ease-out;
+         animation: wars 7s ease-out;
       }
 
       .byline span {
-         animation: spin-letters 6s linear;
+         animation: spin-letters 8s linear;
       }
 
       .byline {
-         animation: move-byline 6s linear;
+         animation: move-byline 8s linear;
       }
 
       .navItem {
-         animation: move-byline 6s linear;
+         animation: move-byline 8s linear;
       }
 
       .landingPage {
@@ -40,7 +40,7 @@
          justify-content: center;
          position: relative;
          height: 800px;
-         color: #feda4a;
+         color: #f2f7f2;
          font-family: 'Pathway Gothic One', sans-serif;
          font-size: 500%;
          font-weight: 600;
@@ -53,11 +53,12 @@
       .backButton {
          margin: 10px;
          padding: 10px;
-         color: #fff;
+         color: #ff206e;
          font-family: "ITC Serif Gothic", Lato;
-         font-size: 0.20em;
+         font-size: 0.32em;
+         font-weight: 700;
          left: -2em;
-         letter-spacing: 0.4em;
+         letter-spacing: 0.3em;
          right: -2em;
          text-align: center;
          text-transform: uppercase;
@@ -68,7 +69,7 @@
       .blogPage {
          display: none;
          width: 90vw;
-         color: #feda4a;
+         color: #f2f7f2;
          font-family: 'Pathway Gothic One', sans-serif;
          font-size: 500%;
          font-weight: 600;
@@ -82,7 +83,7 @@
       .blogText {
          width: 70vw;
          font-size: 20%;
-         border: 1px solid #feda4a;
+         border: 1px solid #f2f7f2;
          display: flex;
          flex-direction: column;
          justify-content: flex-start;
@@ -97,7 +98,7 @@
       .contactPage {
          display: none;
          width: 90vw;
-         color: #feda4a;
+         color: whitesmoke;
          font-family: 'Pathway Gothic One', sans-serif;
          font-size: 500%;
          font-weight: 600;
@@ -111,7 +112,7 @@
       .portfolioPage {
          display: none;
          width: 90vw;
-         color: #feda4a;
+         color: whitesmoke;
          font-family: 'Pathway Gothic One', sans-serif;
          font-size: 500%;
          font-weight: 600;
@@ -125,26 +126,26 @@
       .portfolioText {
          width: 60vw;
          font-size: 20%;
-         border: 1px solid #feda4a;
+         border: 1.5px solid black;
          display: flex;
          flex-direction: column;
          justify-content: flex-start;
          align-items: center;
          letter-spacing: 2px;
-         padding: 10px;
+         padding: 20px;
          text-align: center;
          opacity: 0.9;
       }
 
       .portfolioText a {
-         color: #feda4a;
+         color: #ff206e;
       }
 
       table,
       tr,
       th,
       td {
-         border: 1px solid #feda4a;
+         border: 2px solid darkgrey;
          border-collapse: collapse;
       }
 
@@ -265,7 +266,7 @@
       /* Make the 3D work on the container */
       .homePage {
          perspective: 800px;
-         transform-style: preserve3d;
+         transform-style: preserved;
       }
 
       /* General styles and layout */
@@ -274,7 +275,7 @@
       }
 
       .homePage {
-         height: 17em;
+         height: 18em;
          left: 50%;
          position: absolute;
          top: 53%;
@@ -298,7 +299,7 @@
          padding: 10px;
          color: #fff;
          font-family: "ITC Serif Gothic", Lato;
-         font-size: 1em;
+         font-size: 1.2em;
          left: -2em;
          letter-spacing: 0.4em;
          right: -2em;
@@ -308,10 +309,14 @@
          cursor: pointer;
       }
 
-
       .navItem {
          animation-name: move-byline;
-         animation-duration: 6s;
+         animation-duration: 7s;
+      }
+
+      .navItem:hover {
+         color: #ff206e;
+         text-decoration: none;
       }
 
       .byline span {
@@ -319,7 +324,8 @@
       }
 
       img {
-         width: 100%;
+         border-radius: 75%;
+         width: 275px;
       }
 
       .star,
@@ -362,16 +368,16 @@
       }
 
       input[type=submit] {
-         background-color: #feda4a;
-         color: green;
+         background-color: #ff206e;
+         color: black;
          padding: 12px 20px;
          border: none;
-         border-radius: 4px;
+         border-radius: 8px;
          cursor: pointer;
       }
 
       input[type=submit]:hover {
-         background-color: #feda4a;
+         background-color: whitesmoke;
       }
 
       .container {
@@ -380,10 +386,13 @@
       }
 
       .social a {
-         border: 1px solid #feda4a;
          padding: 5px;
-         margin: 5px;
+         margin: 10px;
          text-decoration: none;
+      }
+
+      .social a:hover {
+         color: whitesmoke;
       }
 
       /*** Media queries for adjusting to different screen sizes ***/
@@ -442,7 +451,7 @@
    <div class="landingPage">
       <div class="homePage">
          <img src="assets/djz.jpg" alt="DJ" class="star">
-         <img src="assets/vir.svg" alt="Zaragoza" class="wars">
+         <!-- <img src="assets/vir.svg" alt="Zaragoza" class="wars"> -->
          <h2 class="byline" id="byline">Web Developer</h2>
       </div>
       <div class="navBar">
@@ -464,7 +473,7 @@
    <div class="aboutPage">
       <div>
          <span class="backButton" onclick="closePage('aboutPage')">
-            < Back</span>
+            < Home</span>
                <div class="crawl">
                   <div class="title">
                      <p>Episode - 1</p>
@@ -495,7 +504,7 @@
    <div class="blogPage">
       <div class="backButton">
          <span onclick="closePage('blogPage')">
-            < BACK</span>
+            < Home</span>
       </div>
 
       <div class="blogText">
@@ -535,12 +544,12 @@
    <div class="portfolioPage">
       <div class="backButton">
          <span onclick="closePage('portfolioPage')">
-            < BACK</span>
+            < Home</span>
       </div>
 
       <div class="portfolioText">
          <div class="title">
-            <h1>Stuff I do! </h1>
+            <h1>Projects </h1>
          </div>
          <table style="width:100%">
             <tr>
@@ -549,28 +558,26 @@
                <th>Links</th>
             </tr>
             <tr>
-               <td>MEET A DEV</td>
-               <td>A Web app to connect employers with developers. Developers can post a profile and search through
-                  potential job listings created by employers. Employers can search for developers by a variety of
-                  filtering options including location, languages, etc. This was a group project in which I focused on
-                  the front end styling and animations.</td>
-               <td><a href="https://www.meetdev.app/meetdev" target="_blank">Website</a>,<a
-                     href="https://github.com/Lambda-School-Labs/CS10-Developer-Profiles" target="_blank">github</a>
+               <td>Game of Life</td>
+               <td>A computer science classic game from 1970. A cellular automaton devised by British mathematician,
+                  John Conway.</td>
+               <td><a href="https://cs-bw-game-of-life.vercel.app" target="_blank">Website</a>,<a
+                     href="https://github.com/djzaragoza/CS-BW-gameOfLife" target="_blank">Github</a>
                </td>
             </tr>
             <tr>
-               <td>Nametag</td>
-               <td>An Ios and Android Chat app that connects you with people around you. it's realtime messaging that's
-                  secure and easy to use.</td>
-               <td><a href="https://slack-files.com/T4JUEB3ME-FDLRUJV32-cfb33fabaa" target="_blank">Live Demo</a></td>
+               <td>DevDeskQue</td>
+               <td>A functional web application that allows Lambda students to submit a help desk ticket, where it
+                  routes into a queue that is monitored by an administrator that also provides tech support.</td>
+               <td><a href="https://devdeskque.netlify.app" target="_blank">Website</a></td>
             </tr>
             <tr>
-               <td>Blood bank near me</td>
-               <td>A React app to to get the list of all the blood banks in your city! you can just type in your city
-                  name and voila, you can get all the contact information for the blood banks near you!</td>
-               <td><a href="https://github.com/samarv/bloodBankNearMe" target="_blank">Github</a></td>
+               <td>To-Do List</td>
+               <td>A simple to-do list, where you can add items, delete items, and even cross off items one-by-one, then
+                  delete all at once</td>
+               <td><a href="https://djz-todo-list.netlify.app" target="_blank">Website</a></td>
             </tr>
-            <tr>
+            <!-- <tr>
                <td>Neural nets for Learning</td>
                <td>Simple and intuitive python functions for Neural Networks. Rather than, creating models with
                   libraries like tensorflow. Get your hands dirty, creaty models from Vanilla Python. taste it. it's
@@ -582,7 +589,7 @@
                <td>My attempt at creating awful awful electronic music. Definately WINNING at this. p.s - Open at your
                   own risk.</td>
                <td><a href="https://slack-files.com/T4JUEB3ME-FDSD1887K-9c4cdf7b3c" target="_blank">Music</a></td>
-            </tr>
+            </tr> -->
          </table>
 
 
@@ -592,7 +599,7 @@
    <div class="contactPage">
       <div class="backButton">
          <span onclick="closePage('contactPage')">
-            < BACK</span>
+            < HOME</span>
       </div>
 
       <div class="portfolioText">
@@ -607,18 +614,17 @@
 
 
                <label for="subject">Message</label>
-               <textarea id="subject" name="subject" placeholder="your message goes here"
-                  style="height:200px"></textarea>
+               <textarea id="subject" name="subject" placeholder="Your message goes here"
+                  style="height:250px"></textarea>
 
                <input type="submit" value="Submit">
             </form>
          </div>
 
          <div class="social">
-            <a href="https://github.com/djzaragoza" target="_blank">github</a>
-            <a href="https://www.linkedin.com/in/dj-zaragoza" target="_blank">
-               Linkedin
-            </a>
+            <a href="https://github.com/djzaragoza" target="_blank">Github</a>
+            <a href="https://www.linkedin.com/in/dj-zaragoza" target="_blank">Linkedin</a>
+            <a href="https://twitter.com/dszaragoza" target="_blank">Twitter</a>
          </div>
 
       </div>

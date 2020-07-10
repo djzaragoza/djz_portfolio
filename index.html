@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <title>DJ Zaragoza: Software Developer</title>
+
+
+   <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Lato:700'>
+
+   <style>
+      /* NOTE: The styles were added inline because Prefixfree needs access to your styles and they must be inlined if they are on local disk! */
+      /* Animation properties */
+      .star {
+         animation: star 6s ease-out;
+      }
+
+      .wars {
+         animation: wars 6s ease-out;
+      }
+
+      .byline span {
+         animation: spin-letters 6s linear;
+      }
+
+      .byline {
+         animation: move-byline 6s linear;
+      }
+
+      .navItem {
+         animation: move-byline 6s linear;
+      }
+
+      .landingPage {
+         display: flex;
+      }
+
+      .aboutPage {
+         display: none;
+         justify-content: center;
+         position: relative;
+         height: 800px;
+         color: #feda4a;
+         font-family: 'Pathway Gothic One', sans-serif;
+         font-size: 500%;
+         font-weight: 600;
+         letter-spacing: 6px;
+         line-height: 150%;
+         perspective: 400px;
+         text-align: justify;
+      }
+
+      .backButton {
+         margin: 10px;
+         padding: 10px;
+         color: #fff;
+         font-family: "ITC Serif Gothic", Lato;
+         font-size: 0.20em;
+         left: -2em;
+         letter-spacing: 0.4em;
+         right: -2em;
+         text-align: center;
+         text-transform: uppercase;
+         text-decoration: none;
+         cursor: pointer;
+      }
+
+      .blogPage {
+         display: none;
+         width: 90vw;
+         color: #feda4a;
+         font-family: 'Pathway Gothic One', sans-serif;
+         font-size: 500%;
+         font-weight: 600;
+         letter-spacing: 6px;
+         flex-direction: row;
+         align-content: space-around;
+         justify-content: space-between;
+         padding: 10px;
+      }
+
+      .blogText {
+         width: 70vw;
+         font-size: 20%;
+         border: 1px solid #feda4a;
+         display: flex;
+         flex-direction: column;
+         justify-content: flex-start;
+         align-items: center;
+         letter-spacing: 2px;
+         padding: 10px;
+         text-align: center;
+         opacity: 0.9;
+      }
+
+
+      .contactPage {
+         display: none;
+         width: 90vw;
+         color: #feda4a;
+         font-family: 'Pathway Gothic One', sans-serif;
+         font-size: 500%;
+         font-weight: 600;
+         letter-spacing: 6px;
+         flex-direction: row;
+         align-content: space-around;
+         justify-content: space-evenly;
+         padding: 10px;
+      }
+
+      .portfolioPage {
+         display: none;
+         width: 90vw;
+         color: #feda4a;
+         font-family: 'Pathway Gothic One', sans-serif;
+         font-size: 500%;
+         font-weight: 600;
+         letter-spacing: 6px;
+         flex-direction: row;
+         align-content: space-around;
+         justify-content: space-evenly;
+         padding: 10px;
+      }
+
+      .portfolioText {
+         width: 60vw;
+         font-size: 20%;
+         border: 1px solid #feda4a;
+         display: flex;
+         flex-direction: column;
+         justify-content: flex-start;
+         align-items: center;
+         letter-spacing: 2px;
+         padding: 10px;
+         text-align: center;
+         opacity: 0.9;
+      }
+
+      .portfolioText a {
+         color: #feda4a;
+      }
+
+      table,
+      tr,
+      th,
+      td {
+         border: 1px solid #feda4a;
+         border-collapse: collapse;
+      }
+
+      th,
+      td {
+         padding: 5px;
+         text-align: left;
+      }
+
+
+      /* Keyframes */
+      @keyframes star {
+         0% {
+            opacity: 0;
+            transform: scale(1.5) translateY(-0.75em);
+         }
+
+         20% {
+            opacity: 1;
+         }
+
+         89% {
+            opacity: 1;
+            transform: scale(1);
+         }
+
+         100% {
+            opacity: 0;
+            transform: translateZ(-1000em);
+         }
+      }
+
+      @keyframes wars {
+         0% {
+            opacity: 0;
+            transform: scale(1.5) translateY(0.5em);
+         }
+
+         20% {
+            opacity: 1;
+         }
+
+         90% {
+            opacity: 1;
+            transform: scale(1);
+         }
+
+         100% {
+            opacity: 0;
+            transform: translateZ(-1000em);
+         }
+      }
+
+      @keyframes spin-letters {
+
+         0%,
+         10% {
+            opacity: 0;
+            transform: rotateY(90deg);
+         }
+
+         30% {
+            opacity: 1;
+         }
+
+         70%,
+         86% {
+            transform: rotateY(0);
+            opacity: 1;
+         }
+
+         95%,
+         100% {
+            opacity: 0;
+         }
+      }
+
+      .crawl {
+         position: relative;
+         top: 99999px;
+         transform-origin: 50% 100%;
+         animation: crawl 60s linear;
+      }
+
+      .crawl>.title {
+         font-size: 90%;
+         text-align: center;
+      }
+
+      .crawl>.title h1 {
+         margin: 0 0 100px;
+         text-transform: uppercase;
+      }
+
+      @keyframes crawl {
+         0% {
+            top: -100px;
+            transform: rotateX(20deg) translateZ(0);
+         }
+
+         100% {
+            top: -6000px;
+            transform: rotateX(25deg) translateZ(-2500px);
+         }
+      }
+
+
+      @keyframes move-byline {
+         0% {
+            transform: translateZ(5em);
+         }
+
+         100% {
+            transform: translateZ(0);
+         }
+      }
+
+      /* Make the 3D work on the container */
+      .homePage {
+         perspective: 800px;
+         transform-style: preserve3d;
+      }
+
+      /* General styles and layout */
+      body {
+         background: #000 url(assets/bg.jpg);
+      }
+
+      .homePage {
+         height: 17em;
+         left: 50%;
+         position: absolute;
+         top: 53%;
+         transform: translate(-50%, -50%);
+         width: 34em;
+      }
+
+      .navBar {
+         position: absolute;
+         top: 73%;
+         display: flex;
+         flex-direction: row;
+         justify-content: center;
+         width: 100vw;
+         height: 17em;
+
+      }
+
+      .navItem {
+         margin: 10px;
+         padding: 10px;
+         color: #fff;
+         font-family: "ITC Serif Gothic", Lato;
+         font-size: 1em;
+         left: -2em;
+         letter-spacing: 0.4em;
+         right: -2em;
+         text-align: center;
+         text-transform: uppercase;
+         text-decoration: none;
+         cursor: pointer;
+      }
+
+
+      .navItem {
+         animation-name: move-byline;
+         animation-duration: 6s;
+      }
+
+      .byline span {
+         display: inline-block;
+      }
+
+      img {
+         width: 100%;
+      }
+
+      .star,
+      .wars,
+      .byline {
+         position: absolute;
+      }
+
+      .star {
+         top: -0.75em;
+      }
+
+      .wars {
+         bottom: -0.5em;
+      }
+
+      .byline {
+         color: #fff;
+         font-family: "ITC Serif Gothic", Lato;
+         font-size: 2.25em;
+         left: -2em;
+         letter-spacing: 0.4em;
+         right: -2em;
+         text-align: center;
+         text-transform: uppercase;
+         top: 29%;
+      }
+
+      input[type=text],
+      select,
+      textarea {
+         width: 100%;
+         padding: 12px;
+         border: 1px solid #ccc;
+         border-radius: 4px;
+         box-sizing: border-box;
+         margin-top: 6px;
+         margin-bottom: 16px;
+         resize: vertical;
+      }
+
+      input[type=submit] {
+         background-color: #feda4a;
+         color: green;
+         padding: 12px 20px;
+         border: none;
+         border-radius: 4px;
+         cursor: pointer;
+      }
+
+      input[type=submit]:hover {
+         background-color: #feda4a;
+      }
+
+      .container {
+         border-radius: 5px;
+         padding: 20px;
+      }
+
+      .social a {
+         border: 1px solid #feda4a;
+         padding: 5px;
+         margin: 5px;
+         text-decoration: none;
+      }
+
+      /*** Media queries for adjusting to different screen sizes ***/
+
+      @media only screen and (max-width: 600px) {
+         .homePage {
+            font-size: 10px;
+         }
+
+         .navItem a {
+            font-size: 7px;
+         }
+
+         .backButton {
+            font-size: 10px;
+         }
+
+         .portfolioText {
+            font-size: 10px;
+         }
+
+         .blogText {
+            font-size: 10px;
+         }
+      }
+
+      @media only screen and (max-width: 480px) {
+         .homePage {
+            font-size: 7px;
+         }
+
+         .navItem a {
+            font-size: 7px;
+         }
+
+         .backButton {
+            font-size: 7px;
+         }
+
+         .portfolioText {
+            font-size: 7px;
+         }
+
+         .blogText {
+            font-size: 7px;
+         }
+      }
+   </style>
+
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+
+</head>
+
+<body>
+
+   <div class="landingPage">
+      <div class="homePage">
+         <img src="assets/djz.jpg" alt="DJ" class="star">
+         <img src="assets/vir.svg" alt="Zaragoza" class="wars">
+         <h2 class="byline" id="byline">Web Developer</h2>
+      </div>
+      <div class="navBar">
+         <div class="navItem">
+            <span onclick="openPage('aboutPage')">About</span>
+         </div>
+         <div class="navItem">
+            <span onclick="openPage('blogPage')">Ideas</span>
+         </div>
+         <div class="navItem">
+            <span onclick="openPage('portfolioPage')">Projects</span>
+         </div>
+         <div class="navItem">
+            <span onclick="openPage('contactPage')">Contact Me</span>
+         </div>
+      </div>
+   </div>
+
+   <div class="aboutPage">
+      <div>
+         <span class="backButton" onclick="closePage('aboutPage')">
+            < Back</span>
+               <div class="crawl">
+                  <div class="title">
+                     <p>Episode - 1</p>
+                     <h1>About</h1>
+                  </div>
+
+                  <p>It was 1996 AC Earth Bound Time, when it all started!</p>
+
+                  <p>It was a diffrent time Back then, there were no starships, No inter glactic travel and No way to be
+                     a baller. Computers changed everything!</p>
+
+                  <p>Personal Computers were fascinating, even when they came out. Good old clunky mouce clicks could do
+                     more math than I could do in my entire life</p>
+
+                  <p>In 2003 EBT, I was 9 and my dad started teaching me about this thing called Internet. Now, with one
+                     click you could connect to anyone one! ANYONE</p>
+
+                  <p>I was SOLD</p>
+
+                  <p>After a Decade Later I started working with those machines. I could code them. I used stuff like
+                     React, redux, Node, mongo, Express to create products on the intenet that could tell stories. my
+                     stories. </p>
+
+               </div>
+      </div>
+   </div>
+
+   <div class="blogPage">
+      <div class="backButton">
+         <span onclick="closePage('blogPage')">
+            < BACK</span>
+      </div>
+
+      <div class="blogText">
+         <div class="title">
+            <h1>Framework to manage Complexity</h1>
+         </div>
+         <h2>PCAP</h2>
+         <h2>Primitives</h2>
+         <p>
+            They are the building blocks of a system like +, - , *.
+         </p>
+         <h2>Components</h2>
+         <p>
+            They are the things/combinations you make of those primitives. For eg. -  if, While etc.
+         </p>
+         <h2>Abstractions</h2>
+         <p>
+            This is where you name your combinations and forget about them. For eg. - def a function and reuse it again
+            and again.
+         </p>
+         <h2>Patterns</h2>
+         <p>
+            This is a regular and intelligible form or sequence discernible in the way in which something happens or is
+            done. For eg. -  High order function that takes in a function and returns a function
+         </p>
+
+         <h3>
+            In software engineering lure, we often hear about "breaking down the problem into manageable chunks", this
+            is just that. Composing problems into manageble chunks. Stop thing about things that have already been done.
+            Create on top of what you have already built.
+         </h3>
+
+      </div>
+   </div>
+
+
+   <div class="portfolioPage">
+      <div class="backButton">
+         <span onclick="closePage('portfolioPage')">
+            < BACK</span>
+      </div>
+
+      <div class="portfolioText">
+         <div class="title">
+            <h1>Stuff I do! </h1>
+         </div>
+         <table style="width:100%">
+            <tr>
+               <th>Name</th>
+               <th>Description</th>
+               <th>Links</th>
+            </tr>
+            <tr>
+               <td>MEET A DEV</td>
+               <td>A Web app to connect employers with developers. Developers can post a profile and search through
+                  potential job listings created by employers. Employers can search for developers by a variety of
+                  filtering options including location, languages, etc. This was a group project in which I focused on
+                  the front end styling and animations.</td>
+               <td><a href="https://www.meetdev.app/meetdev" target="_blank">Website</a>,<a
+                     href="https://github.com/Lambda-School-Labs/CS10-Developer-Profiles" target="_blank">github</a>
+               </td>
+            </tr>
+            <tr>
+               <td>Nametag</td>
+               <td>An Ios and Android Chat app that connects you with people around you. it's realtime messaging that's
+                  secure and easy to use.</td>
+               <td><a href="https://slack-files.com/T4JUEB3ME-FDLRUJV32-cfb33fabaa" target="_blank">Live Demo</a></td>
+            </tr>
+            <tr>
+               <td>Blood bank near me</td>
+               <td>A React app to to get the list of all the blood banks in your city! you can just type in your city
+                  name and voila, you can get all the contact information for the blood banks near you!</td>
+               <td><a href="https://github.com/samarv/bloodBankNearMe" target="_blank">Github</a></td>
+            </tr>
+            <tr>
+               <td>Neural nets for Learning</td>
+               <td>Simple and intuitive python functions for Neural Networks. Rather than, creating models with
+                  libraries like tensorflow. Get your hands dirty, creaty models from Vanilla Python. taste it. it's
+                  FUN.</td>
+               <td><a href="https://github.com/samarv/special-potato" target="_blank">Github</a></td>
+            </tr>
+            <tr>
+               <td>tranceFligh</td>
+               <td>My attempt at creating awful awful electronic music. Definately WINNING at this. p.s - Open at your
+                  own risk.</td>
+               <td><a href="https://slack-files.com/T4JUEB3ME-FDSD1887K-9c4cdf7b3c" target="_blank">Music</a></td>
+            </tr>
+         </table>
+
+
+      </div>
+   </div>
+
+   <div class="contactPage">
+      <div class="backButton">
+         <span onclick="closePage('contactPage')">
+            < BACK</span>
+      </div>
+
+      <div class="portfolioText">
+         <div class="title">
+            <h1>Contact</h1>
+         </div>
+         <div class="container">
+            <form class="gform"
+               action="https://script.google.com/macros/s/AKfycbzITP-0x-CGtf_f_JY9PIrSMoVEzoVmcjjuHtyQ5hvcwI2CHht6/exec">
+               <label for="fname">Name</label>
+               <input type="text" id="fname" name="firstname" placeholder="Your name..">
+
+
+               <label for="subject">Message</label>
+               <textarea id="subject" name="subject" placeholder="your message goes here"
+                  style="height:200px"></textarea>
+
+               <input type="submit" value="Submit">
+            </form>
+         </div>
+
+         <div class="social">
+            <a href="https://github.com/djzaragoza" target="_blank">github</a>
+            <a href="https://www.linkedin.com/in/dj-zaragoza" target="_blank">
+               Linkedin
+            </a>
+         </div>
+
+      </div>
+   </div>
+
+   <script src="js/index.js"></script>
+</body>
+
+
+</html>

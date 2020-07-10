@@ -12,6 +12,10 @@
   animation: move-byline 10s linear infinite;
 }
 
+img {
+  border-radius: 50%;
+}
+
 /* Keyframes */
 @keyframes star {
   0% {

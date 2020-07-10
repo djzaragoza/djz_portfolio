@@ -3,7 +3,7 @@
 
 <head>
    <meta charset="UTF-8">
-   <title>DJ Zaragoza: Software Developer</title>
+   <title>DJ Zaragoza</title>
 
 
    <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Lato:700'>
@@ -12,23 +12,23 @@
       /* NOTE: The styles were added inline because Prefixfree needs access to your styles and they must be inlined if they are on local disk! */
       /* Animation properties */
       .star {
-         animation: star 6s ease-out;
+         animation: star 7s ease-out;
       }
 
       .wars {
-         animation: wars 6s ease-out;
+         animation: wars 7s ease-out;
       }
 
       .byline span {
-         animation: spin-letters 6s linear;
+         animation: spin-letters 8s linear;
       }
 
       .byline {
-         animation: move-byline 6s linear;
+         animation: move-byline 8s linear;
       }
 
       .navItem {
-         animation: move-byline 6s linear;
+         animation: move-byline 8s linear;
       }
 
       .landingPage {
@@ -40,7 +40,7 @@
          justify-content: center;
          position: relative;
          height: 800px;
-         color: #feda4a;
+         color: #f2f7f2;
          font-family: 'Pathway Gothic One', sans-serif;
          font-size: 500%;
          font-weight: 600;
@@ -53,11 +53,12 @@
       .backButton {
          margin: 10px;
          padding: 10px;
-         color: #fff;
+         color: #ff206e;
          font-family: "ITC Serif Gothic", Lato;
-         font-size: 0.20em;
+         font-size: 0.32em;
+         font-weight: 700;
          left: -2em;
-         letter-spacing: 0.4em;
+         letter-spacing: 0.3em;
          right: -2em;
          text-align: center;
          text-transform: uppercase;
@@ -68,7 +69,7 @@
       .blogPage {
          display: none;
          width: 90vw;
-         color: #feda4a;
+         color: #f2f7f2;
          font-family: 'Pathway Gothic One', sans-serif;
          font-size: 500%;
          font-weight: 600;
@@ -82,7 +83,7 @@
       .blogText {
          width: 70vw;
          font-size: 20%;
-         border: 1px solid #feda4a;
+         border: 1px solid #f2f7f2;
          display: flex;
          flex-direction: column;
          justify-content: flex-start;
@@ -97,7 +98,7 @@
       .contactPage {
          display: none;
          width: 90vw;
-         color: #feda4a;
+         color: whitesmoke;
          font-family: 'Pathway Gothic One', sans-serif;
          font-size: 500%;
          font-weight: 600;
@@ -111,7 +112,7 @@
       .portfolioPage {
          display: none;
          width: 90vw;
-         color: #feda4a;
+         color: whitesmoke;
          font-family: 'Pathway Gothic One', sans-serif;
          font-size: 500%;
          font-weight: 600;
@@ -125,26 +126,26 @@
       .portfolioText {
          width: 60vw;
          font-size: 20%;
-         border: 1px solid #feda4a;
+         border: 1.5px solid black;
          display: flex;
          flex-direction: column;
          justify-content: flex-start;
          align-items: center;
          letter-spacing: 2px;
-         padding: 10px;
+         padding: 20px;
          text-align: center;
          opacity: 0.9;
       }
 
       .portfolioText a {
-         color: #feda4a;
+         color: #ff206e;
       }
 
       table,
       tr,
       th,
       td {
-         border: 1px solid #feda4a;
+         border: 2px solid darkgrey;
          border-collapse: collapse;
       }
 
@@ -265,7 +266,7 @@
       /* Make the 3D work on the container */
       .homePage {
          perspective: 800px;
-         transform-style: preserve3d;
+         transform-style: preserved;
       }
 
       /* General styles and layout */
@@ -274,7 +275,7 @@
       }
 
       .homePage {
-         height: 17em;
+         height: 18em;
          left: 50%;
          position: absolute;
          top: 53%;
@@ -298,7 +299,7 @@
          padding: 10px;
          color: #fff;
          font-family: "ITC Serif Gothic", Lato;
-         font-size: 1em;
+         font-size: 1.2em;
          left: -2em;
          letter-spacing: 0.4em;
          right: -2em;
@@ -308,10 +309,14 @@
          cursor: pointer;
       }
 
-
       .navItem {
          animation-name: move-byline;
-         animation-duration: 6s;
+         animation-duration: 7s;
+      }
+
+      .navItem:hover {
+         color: #ff206e;
+         text-decoration: none;
       }
 
       .byline span {
@@ -319,7 +324,8 @@
       }
 
       img {
-         width: 100%;
+         border-radius: 75%;
+         width: 275px;
       }
 
       .star,
@@ -362,16 +368,16 @@
       }
 
       input[type=submit] {
-         background-color: #feda4a;
-         color: green;
+         background-color: #ff206e;
+         color: black;
          padding: 12px 20px;
          border: none;
-         border-radius: 4px;
+         border-radius: 8px;
          cursor: pointer;
       }
 
       input[type=submit]:hover {
-         background-color: #feda4a;
+         background-color: whitesmoke;
       }
 
       .container {
@@ -380,7 +386,6 @@
       }
 
       .social a {
-         border: 1px solid #feda4a;
          padding: 5px;
          margin: 5px;
          text-decoration: none;
@@ -442,7 +447,7 @@
    <div class="landingPage">
       <div class="homePage">
          <img src="assets/djz.jpg" alt="DJ" class="star">
-         <img src="assets/vir.svg" alt="Zaragoza" class="wars">
+         <!-- <img src="assets/vir.svg" alt="Zaragoza" class="wars"> -->
          <h2 class="byline" id="byline">Web Developer</h2>
       </div>
       <div class="navBar">
@@ -555,7 +560,7 @@
                   filtering options including location, languages, etc. This was a group project in which I focused on
                   the front end styling and animations.</td>
                <td><a href="https://www.meetdev.app/meetdev" target="_blank">Website</a>,<a
-                     href="https://github.com/Lambda-School-Labs/CS10-Developer-Profiles" target="_blank">github</a>
+                     href="https://github.com/Lambda-School-Labs/CS10-Developer-Profiles" target="_blank">Github</a>
                </td>
             </tr>
             <tr>
@@ -615,9 +620,12 @@
          </div>
 
          <div class="social">
-            <a href="https://github.com/djzaragoza" target="_blank">github</a>
+            <a href="https://github.com/djzaragoza" target="_blank">Github</a>
             <a href="https://www.linkedin.com/in/dj-zaragoza" target="_blank">
                Linkedin
+            </a>
+            <a href="https://twitter.com/dszaragoza" target="_blank">
+               Twitter
             </a>
          </div>
 

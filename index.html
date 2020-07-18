@@ -266,7 +266,7 @@
 
       /* Make the 3D work on the container */
       .homePage {
-         perspective: 800px;
+         perspective: 600px;
          transform-style: preserved;
       }
 
@@ -280,8 +280,8 @@
          left: 50%;
          position: absolute;
          top: 53%;
-         transform: translate(-50%, -50%);
-         width: 34em;
+         transform: translate(-50%, -40%);
+         width: 32em;
       }
 
       .navBar {
@@ -384,6 +384,18 @@
          background-color: #ff206e;
       }
 
+      .resume_button {
+         background-color: #ccc;
+         color: black;
+         font-weight: 600;
+         padding: 14px 24px;
+         border: none;
+         border-radius: 10px;
+         cursor: pointer;
+         text-decoration: none;
+         width: 20% -20% 20% -20%;
+      }
+
       .container {
          border-radius: 5px;
          padding: 20px;
@@ -463,7 +475,7 @@
             <span onclick="openPage('aboutPage')">About</span>
          </div>
          <div class="navItem">
-            <span onclick="openPage('blogPage')">Ideas</span>
+            <span onclick="openPage('blogPage')">Resume</span>
          </div>
          <div class="navItem">
             <span onclick="openPage('portfolioPage')">Projects</span>
@@ -516,7 +528,7 @@
 
       <div class="blogText">
          <div class="title">
-            <h1>CONTENT</h1>
+
          </div>
          <!-- <h2>PCAP</h2>
          <h2>Primitives</h2>
@@ -640,6 +652,12 @@
             <a href="https://twitter.com/dszaragoza" target="_blank">Twitter</a>
          </div>
 
+      </div>
+      <div class="resume_button">
+         <p>
+            <a href="assets/DJZaragoza_resume_WD.pdf" className="button"><i className="fa fa-download"> View
+                  Resume</i></a>
+         </p>
       </div>
    </div>
 

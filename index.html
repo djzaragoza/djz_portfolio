@@ -4,10 +4,10 @@
 <head>
    <meta charset="UTF-8">
    <link rel="icon" href="/assets/hacker_img.png" type="image/x-icon">
-   <title>DJ Zaragoza</title>
-
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
    <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Lato:700'>
+   <title>DJ Zaragoza</title>
 
    <style>
       /* NOTE: The styles were added inline because Prefixfree needs access to your styles and they must be inlined if they are on local disk! */
@@ -266,7 +266,7 @@
 
       /* Make the 3D work on the container */
       .homePage {
-         perspective: 800px;
+         perspective: 600px;
          transform-style: preserved;
       }
 
@@ -280,8 +280,8 @@
          left: 50%;
          position: absolute;
          top: 53%;
-         transform: translate(-50%, -50%);
-         width: 34em;
+         transform: translate(-50%, -40%);
+         width: 32em;
       }
 
       .navBar {
@@ -384,19 +384,31 @@
          background-color: #ff206e;
       }
 
+      .fa {
+         font-size: 22px;
+         text-decoration: none;
+         font-weight: 500;
+      }
+
+      .fa:hover {
+         opacity: .8;
+      }
+
       .container {
          border-radius: 5px;
          padding: 20px;
       }
 
       .social a {
-         padding: 5px;
+         font-size: 25px;
+         padding: 3px;
          margin: 10px;
          text-decoration: none;
       }
 
       .social a:hover {
          color: whitesmoke;
+         opacity: .8;
       }
 
       /*** Media queries for adjusting to different screen sizes ***/
@@ -463,7 +475,7 @@
             <span onclick="openPage('aboutPage')">About</span>
          </div>
          <div class="navItem">
-            <span onclick="openPage('blogPage')">Ideas</span>
+            <span onclick="openPage('blogPage')">Blog</span>
          </div>
          <div class="navItem">
             <span onclick="openPage('portfolioPage')">Projects</span>
@@ -476,7 +488,7 @@
 
    <div class="aboutPage">
       <div>
-         <span class="backButton" onclick="closePage('aboutPage')">
+         <span class="backButton" onclick="closePage('aboutPage')" class="fa fa-home">
             < Home</span>
                <div class="crawl">
                   <div class="title">
@@ -510,13 +522,13 @@
 
    <div class="blogPage">
       <div class="backButton">
-         <span onclick="closePage('blogPage')">
+         <span onclick="closePage('blogPage')" class="fa fa-home">
             < Home</span>
       </div>
 
       <div class="blogText">
          <div class="title">
-            <h1>CONTENT</h1>
+
          </div>
          <!-- <h2>PCAP</h2>
          <h2>Primitives</h2>
@@ -550,7 +562,7 @@
 
    <div class="portfolioPage">
       <div class="backButton">
-         <span onclick="closePage('portfolioPage')">
+         <span onclick="closePage('portfolioPage')" class="fa fa-home">
             < Home</span>
       </div>
 
@@ -611,7 +623,7 @@
 
    <div class="contactPage">
       <div class="backButton">
-         <span onclick="closePage('contactPage')">
+         <span onclick="closePage('contactPage')" class="fa fa-home">
             < HOME</span>
       </div>
 
@@ -635,9 +647,12 @@
          </div>
 
          <div class="social">
-            <a href="https://github.com/djzaragoza" target="_blank">Github</a>
-            <a href="https://www.linkedin.com/in/dj-zaragoza" target="_blank">Linkedin</a>
-            <a href="https://twitter.com/dszaragoza" target="_blank">Twitter</a>
+            <a href="https://github.com/djzaragoza" target="_blank" class="fa fa-github"> Github</a>
+            <a href="https://www.linkedin.com/in/dj-zaragoza" target="_blank" class="fa fa-linkedin"> Linkedin</a>
+            <a href="https://twitter.com/dszaragoza" target="_blank" class="fa fa-twitter"> Twitter</a>
+            <a href="https://medium.com/@zaragoza0126" target="_blank" class="fa fa-medium"> Medium</a>
+            <a href="assets/DJZaragoza_resume_WD.pdf" target="_blank" class="fa fa-file"> Resume</a>
+
          </div>
 
       </div>
